@@ -2,14 +2,14 @@
 
 ## About Project
 
-<h4 align="center">
+<h2 align="center">
     Complete Store Management System Application
-</h4>
+</h2>
 
-<h5> Author : Md. Shawanuzzaman Himu </h5>
+<h4> Author : Md. Shawanuzzaman Himu </h4>
 
 To develop this project, I usually use PHP, Laravel, MySQL, jQuery, JavaScript, Bootstrap
 
-========== Thanks =========
+========== Thanks ========= <br />
 ==== Shawon Himu  ========
 
