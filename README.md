@@ -8,8 +8,5 @@
 
 <h4> Author : Md. Shawanuzzaman Himu </h4>
 
-To develop this project, I usually use PHP, Laravel, MySQL, jQuery, JavaScript, Bootstrap
-
-========== Thanks ========= <br />
 ==== Shawon Himu  ========
 
