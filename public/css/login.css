@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    box-sizing: border-box;
+}
+
+.loginLogo img {
+    width: 23%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.mobileLogo img {
+    width: 36px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.loginPage {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    /* z-index: 2; */
+
+    /*
+    background: linear-gradient(#BABCB9,#df8073);
+    */
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.641);
+}
+.mainArea {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.loginCard {
+    background: rgba(245, 241, 241, 0.2);
+    text-align: center;
+    z-index: 100;
+    padding: 10% 14%;
+    border-radius: 10px;
+    backdrop-filter: blur(4px);
+    box-shadow: 1px 3px 16px rgba(59, 59, 59, 0.4),
+        -1px -1px 16px rgba(61, 61, 61, 0.5);
+    font-size: 1rem;
+}
+
+.loginCard input {
+    margin-bottom: 10px;
+}
+
+.loginAsBtns button {
+    margin: 0;
+}
+
+.btn-login {
+    min-width: 60%;
+    padding: 7px 100px;
+    background-color: #7c5cc4;
+    color: #ddd;
+    font-size: 18px;
+}
+
+.btn-login:hover {
+    background-color: #522caa;
+    color: #fff;
+}
+
+.formExt {
+    margin-top: 10px;
+    background-color: #dddddd94;
+    border-radius: 10px;
+}
+
+.formExt .extraLink {
+    text-decoration: none;
+}
+
+fieldset legend {
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 660px) {
+    .loginCard {
+        height: 99vh;
+        padding: 50px 10px;
+    }
+
+    .btn-login {
+        width: 100%;
+        padding: 7px 10px;
+    }
+    .loginAsBtns button {
+        margin-bottom: 5px;
+    }
+}
+
+@media (min-width: 660px) and (max-width: 990px) {
+    .loginCard {
+        height: 97vh;
+        padding: 50px 30px;
+    }
+
+    .btn-login {
+        width: 100%;
+        padding: 7px 0px;
+    }
+    .loginAsBtns button {
+        margin-bottom: 5px;
+    }
+}

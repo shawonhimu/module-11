@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-primary: #7380ec;
+    --color-danger: #74131b;
+    --color-success: #0a533b;
+    --color-warning: #ffbb55;
+    --color-red: #c10101;
+    --color-blue: #2200ff;
+    --color-green: rgb(4, 211, 39);
+    --color-white: #fff;
+    --color-black: #000000;
+    --color-info-dark: #ddd;
+    --color-info-light: #dce1eb;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-primary-variant: #3240ad;
+    --color-dark-variant: #677483;
+    --color-background: #e6e0e096;
+    --color-sidebar: #1c331aea;
+
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1rem;
+    --border-radius-4: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --table-padding: 0 1.8rem 1.8rem 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 1px 3px 6px var(--color-info-light),
+        -1px -3px 6px var(--color-info-light);
+}
+
+/*   ==================== Dark Theme Variables  ================*/
+
+.dark-theme-variables {
+    --color-background: #181a1e;
+    --color-danger: #ff7782;
+    --color-white: #202528;
+    --color-black: #fff;
+    --color-success: #3ef7b9;
+    --color-info-dark: #74777c;
+    --color-info-light: #7d8da1;
+    --color-dark: #fff;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-dark-variant: #e7e5e5;
+
+    --box-shadow: 1px 3px 5px var(--color-info-dark),
+        -1px -1px 3px var(--color-info-dark);
+}
+
+/*   =========	General for body ==========*/
+
+body {
+    background: var(--color-background);
+    box-sizing: border-box;
+}
+
+.mainAdmin {
+    width: 100%;
+    display: flex;
+}
+
+.adminSidebar {
+    width: 18%;
+    background-color: var(--color-sidebar);
+    min-height: 100vh;
+}
+
+.adminContentBar {
+    width: 92%;
+    z-index: 5;
+}
+
+/*   =========	Sidebar Menus ==========*/
+
+.adminSidebarOptions {
+    margin: 0;
+    padding: 0;
+}
+
+.adminSidebarOptions .adminLogo {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.adminSidebarOptions .adminLogo .logoLink {
+    text-decoration: none;
+    color: #000000;
+}
+
+.adminLogo .logoLink img {
+    max-width: 104px;
+    width: 80%;
+    max-height: min-content;
+    padding: 15px 5px;
+}
+
+.navSidebar {
+    padding: 0;
+}
+
+.navSidebar .navSbarItem {
+    list-style: none;
+    margin: 2px 0;
+}
+
+.navSidebar .navSbarItem .navSbarLink {
+    display: block;
+    padding: 5px 0 5px 15px;
+    text-decoration: none;
+    color: var(--color-info-dark);
+}
+
+.navSbarItem .active {
+    position: relative;
+    background-color: #bdb1b1;
+    color: #000000 !important;
+    box-shadow: 2px 1px 5px #cecece, -2px -1px 4px #cecece;
+    z-index: 1;
+}
+
+.navSbarItem .active i {
+    color: #1a00db;
+}
+
+.navSbarItem .active::before {
+    content: "";
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    right: -13px;
+    background-color: #f0ecec;
+    color: #000000;
+    transform: rotate(45deg);
+}
+
+.navSidebar .navSbarItem .navSbarLink:hover {
+    background-color: #bdb1b1;
+    color: #000000;
+    box-shadow: 2px 1px 5px #fff, -2px -1px 4px #fff;
+}
+
+.navSidebar .navSbarItem .navSbarLink:hover i {
+    color: #1a00db;
+}
+
+.navSbarLink .sideTitle {
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.navSbarLink i {
+    color: #08d18e;
+    font-size: 20px;
+}
+
+/*   =========	Top Navbar / Menus ==========*/
+
+.adminTopbar {
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+.TopNavbar {
+    margin-top: 15px;
+    padding: 16px 15px;
+}
+
+.TopNavbar .TopNavbarItem {
+    margin: 0;
+}
+
+.TopNavbar .TopNavbarItem .TopNavbarLink {
+    padding: 15px;
+    color: #08d18e;
+    text-decoration: none;
+}
+
+.TopNavbar .TopNavbarItem i {
+    font-size: 20px;
+    font-weight: 600;
+    color: #520707;
+}
+
+.TopNavbarOptions {
+    display: flex;
+    margin: 0;
+    justify-content: space-evenly;
+}
+
+.TopNavbarOptions li {
+    list-style: none;
+    margin: 0 5px;
+}
+
+.TopNavbarOptions li a {
+    text-decoration: none;
+    color: rgb(81, 4, 4);
+    padding: 17px 7px;
+}
+
+.TopNavbarOptions .user a {
+    margin-left: 0;
+}
+
+.TopNavbarOptions li a span {
+    margin-left: 9px;
+}
+
+/* ==== 		User dropdown Menu	==== */
+
+.userDropDownMenu {
+    position: relative;
+}
+
+.userDropDownMenu Ul {
+    position: absolute;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 3px 6px #000, -1px -1px 3px #000000a5;
+    margin: 0 0 0 0;
+    padding: 5px;
+    top: 44px;
+    right: 0;
+    display: none;
+    z-index: 1000;
+}
+
+.userDropDownMenu Ul::before {
+    content: "";
+    position: absolute;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    top: -15px;
+    display: block;
+    width: 150px;
+    height: 30px;
+    z-index: -1;
+}
+
+.userDropDownMenu:hover Ul {
+    display: block;
+}
+
+.userDropDownMenu Ul li {
+    list-style: none;
+}
+
+.userDropDownMenu Ul li a {
+    min-width: 125px;
+    text-decoration: none;
+    color: #000;
+    padding: 5px 20px;
+    display: block !important;
+}
+
+.userDropDownMenu Ul li:hover a {
+    color: #000;
+    background-color: #ddd;
+}
+
+/*   =========	Home Contents ==========*/
+
+.adminContents {
+    padding: 10px 7px;
+}
+
+/*   =========	BDMS Home Contents ==========*/
+
+.adminBDMSChart {
+    background-color: var(--color-white);
+    color: var(--color-dark);
+    padding: 20px;
+    margin: 2px 5px 10px 5px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    min-height: 435px;
+}
+.newCard {
+    background: var(--color-white);
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+}
+.adminBDMSHomeCard {
+    min-height: 100px;
+    padding: 20px 10px;
+    margin: 5px 4px 5px 4px;
+    justify-content: center;
+    text-align: start;
+    line-height: 1rem;
+    font-size: 18px;
+    border: none;
+}
+
+.adminBDMSHomeCard .adminBDMSHomeCardIcon i {
+    margin: 10px 15px 0 0;
+    font-size: 40px;
+}
+
+.adminBDMSHomeCard .adminBDMSHomeCardIcon .fa-money-check-alt {
+    color: var(--color-primary-variant);
+}
+
+.adminBDMSHomeCard .adminBDMSHomeCardIcon .fa-user-graduate {
+    color: var(--color-success);
+}
+
+.adminBDMSHomeCard .adminBDMSHomeCardIcon .fa-newspaper {
+    color: var(--color-primary);
+}
+
+.adminBDMSHomeCard .adminBDMSHomeCardIcon .fa-house-user {
+    color: var(--color-danger);
+}
+
+.adminBDMSHomeCard .adminBDMSHomeCardIcon .fa-users-slash {
+    color: var(--color-red);
+}
+
+.adminBDMSHomeCard .adminBDMSHomeCardIcon .fa-book-open {
+    color: var(--color-green);
+}
+
+.adminBDMSHomeCard .adminBDMSHomeCardIcon .fa-bell {
+    color: var(--color-warning);
+}
+
+.adminBDMSHomeCard .adminBDMSHomeCardIcon .fa-bullhorn {
+    color: var(--color-success);
+}
+
+.adminBDMSHomeCard .adminBDMSHomeCardTxt {
+    padding: 5px;
+    line-height: 1.5rem;
+    font-size: 16px;
+    color: var(--color-dark);
+}
+
+/*   =========	End BDMS Home Contents ==========*/
+
+/*   =========	Responsive ==========*/
+
+@media screen and (max-width: 1280px) {
+    .adminSidebar {
+        width: 20%;
+    }
+
+    .adminContentBar {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .adminSidebar {
+        width: 34%;
+    }
+
+    .adminContentBar {
+        width: 66%;
+    }
+}
+
+.row {
+    --bs-gutter-x: 0rem;
+}
